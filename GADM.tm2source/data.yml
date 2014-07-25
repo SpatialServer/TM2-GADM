@@ -1,0 +1,149 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: ''
+  saveCenter: true
+attribution: GADM
+center: 
+  - 5.6689453125
+  - 44.574817404670306
+  - 6
+description: GADM Levels 0 thru 5.
+Layer: 
+  - id: gadm5
+    Datasource: 
+      dbname: gadm_simplified_ten
+      extent: 4.374781,44.551530,7.104884,45.876815
+      geometry_field: geomsimp
+      geometry_table: ''
+      host: localhost
+      key_field: ''
+      max_size: 512
+      port: 5432
+      table: |-
+        (SELECT id, geomsimp 
+         from gadm5_2014 
+         where geomsimp is not null
+        and z(!scale_denominator!) >=10 AND geom && !bbox!
+        ) a
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      id: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: gadm4
+    Datasource: 
+      dbname: gadm_simplified_ten
+      extent: 4.374781,44.551530,7.104884,45.876815
+      geometry_field: geomsimp
+      geometry_table: ''
+      host: localhost
+      key_field: ''
+      max_size: 512
+      port: 5432
+      table: |-
+        (SELECT id, geomsimp 
+         from gadm4_2014 
+         where geomsimp is not null
+        and z(!scale_denominator!) >=8 AND geom && !bbox!
+        ) a
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      id: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: gadm3
+    Datasource: 
+      dbname: gadm_simplified_ten
+      extent: 4.374781,44.551530,7.104884,45.876815
+      geometry_field: geomsimp
+      geometry_table: ''
+      host: localhost
+      key_field: ''
+      max_size: 512
+      port: 5432
+      table: |-
+        (SELECT id, geomsimp 
+         from gadm3_2014 
+         where geomsimp is not null
+        and z(!scale_denominator!) >=6 AND geom && !bbox!
+        ) a
+      type: postgis
+      user: postgres
+    description: Gadm 2014 Level 3
+    fields: 
+      id: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: gadm2
+    Datasource: 
+      dbname: gadm_simplified_ten
+      extent: 4.374781,44.551530,7.104884,45.876815
+      geometry_field: geomsimp
+      geometry_table: ''
+      host: localhost
+      key_field: ''
+      max_size: 512
+      port: 5432
+      table: |-
+        (SELECT id, geomsimp 
+         from gadm2_2014 
+         where geomsimp is not null
+        and z(!scale_denominator!) >=4 AND geom && !bbox!
+        ) a
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      id: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: gadm1
+    Datasource: 
+      dbname: gadm_simplified_ten
+      extent: 4.374781,44.551530,7.104884,45.876815
+      geometry_field: geomsimp
+      geometry_table: ''
+      host: localhost
+      key_field: ''
+      max_size: 512
+      port: 5432
+      table: (SELECT id, geomsimp from gadm1_2014 where geomsimp is not null) a
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      id: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  - id: gadm0
+    Datasource: 
+      dbname: gadm_simplified_ten
+      extent: 4.374781,44.551530,7.104884,45.876815
+      geometry_field: geomsimp
+      geometry_table: ''
+      host: localhost
+      key_field: ''
+      max_size: 512
+      port: 5432
+      table: (SELECT id, geomsimp from gadm0_2014 where geomsimp is not null) a
+      type: postgis
+      user: postgres
+    description: ''
+    fields: 
+      id: Number
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 14
+minzoom: 0
+name: GADM

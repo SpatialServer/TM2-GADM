@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[GADM]]></Parameter>
+  <Parameter name="center">5.6689453125,44.574817404670306,6</Parameter>
+  <Parameter name="description"><![CDATA[GADM Levels 0 thru 5.]]></Parameter>
+  <Parameter name="format">pbf</Parameter>
+  <Parameter name="json"><![CDATA[{"vector_layers":[{"id":"gadm5","description":"","fields":{"id":"Number"}},{"id":"gadm4","description":"","fields":{"id":"Number"}},{"id":"gadm3","description":"Gadm 2014 Level 3","fields":{"id":"Number"}},{"id":"gadm2","description":"","fields":{"id":"Number"}},{"id":"gadm1","description":"","fields":{"id":"Number"}},{"id":"gadm0","description":"","fields":{"id":"Number"}}]}]]></Parameter>
+  <Parameter name="maxzoom">14</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="name"><![CDATA[GADM]]></Parameter>
+</Parameters>
+
+
+<Layer name="gadm5"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gadm_simplified_ten]]></Parameter>
+       <Parameter name="extent"><![CDATA[4.374781,44.551530,7.104884,45.876815]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geomsimp]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT id, geomsimp 
+ from gadm5_2014 
+ where geomsimp is not null
+and z(!scale_denominator!) >=10 AND geom && !bbox!
+) a]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="gadm4"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gadm_simplified_ten]]></Parameter>
+       <Parameter name="extent"><![CDATA[4.374781,44.551530,7.104884,45.876815]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geomsimp]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT id, geomsimp 
+ from gadm4_2014 
+ where geomsimp is not null
+and z(!scale_denominator!) >=8 AND geom && !bbox!
+) a]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="gadm3"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gadm_simplified_ten]]></Parameter>
+       <Parameter name="extent"><![CDATA[4.374781,44.551530,7.104884,45.876815]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geomsimp]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT id, geomsimp 
+ from gadm3_2014 
+ where geomsimp is not null
+and z(!scale_denominator!) >=6 AND geom && !bbox!
+) a]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="gadm2"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gadm_simplified_ten]]></Parameter>
+       <Parameter name="extent"><![CDATA[4.374781,44.551530,7.104884,45.876815]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geomsimp]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT id, geomsimp 
+ from gadm2_2014 
+ where geomsimp is not null
+and z(!scale_denominator!) >=4 AND geom && !bbox!
+) a]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="gadm1"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gadm_simplified_ten]]></Parameter>
+       <Parameter name="extent"><![CDATA[4.374781,44.551530,7.104884,45.876815]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geomsimp]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT id, geomsimp from gadm1_2014 where geomsimp is not null) a]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="gadm0"
+  buffer-size="8"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gadm_simplified_ten]]></Parameter>
+       <Parameter name="extent"><![CDATA[4.374781,44.551530,7.104884,45.876815]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[geomsimp]]></Parameter>
+       <Parameter name="geometry_table"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="max_size"><![CDATA[512]]></Parameter>
+       <Parameter name="port"><![CDATA[5432]]></Parameter>
+       <Parameter name="table"><![CDATA[(SELECT id, geomsimp from gadm0_2014 where geomsimp is not null) a]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
